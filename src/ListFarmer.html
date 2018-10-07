@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AgroChain</title>
+ 
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+ 
+		
+</head>
+<body>
+<div class="wrapper">
+  
+  
+  <h1>Farmer Details List</h1>
+  
+	
+	<div class="form" id="sign-up-form">
+		
+		
+		<h2 class="form-title">Farmer List</h2>
+		<select name="farmer" id="farmer" onchange="getdetails()">
+        <option selected text-align:center id="644086">Ramu Gowda</option>
+        <option  text-align:center id="644034">Sivannada swamy</option>
+        <option  text-align:center id="644046">Byrappa</option>
+		</select>
+		
+		
+		  <table id = "table1" >  
+			
+			<!-- <tr><td><b><label class = "black">Name</label></td><td>:</td></b><td><span class="black" span id="getval2"></span></td></tr> -->
+			<tr><td><b><label class = "black">Location</label></td><td>:</td></b><td><span class="black" span id="getval3"> Ramohalli</span></td></tr>
+			<tr><td><b><label class = "black">Crop</label></td><td>:</td></b><td><span class="black" span id="getval4"> Ground nut</span></td></tr>
+			<tr><td><b><label class = "black">Contact</label></td><td>:</td></b><td><span class="black" span id="getval5">9876543210</span></td></tr>
+			<tr><td><b><label class = "black">Quantity</label><td>:</td></td></b><td><span class="black" span id="getval6">10 Quintal</span></td></tr> 
+			<tr><td><b><label class = "black">Price</label></td><td>:</td></b><td><span class="black" span id="getval7">500000</span></td></tr>
+			
+			</table>		   
+		   
+	
+		
+		
+				
+		<button type="button" class="btn-submit" id="submit_fund" onclick="redirect2()">Fund Farmer</button>
+	</div>
+	</div>
+			
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		 <!-- Include all compiled plugins (below), or include individual files as needed -->
+		 <script src="js/bootstrap.min.js"></script>
+		 <script src="js/web3.min.js"></script>
+		 <script src="js/truffle-contract.js"></script>
+		 <link href="./stylesheets/app.css" rel='stylesheet' type='text/css'>
+		 <script src="js/app.js"></script>
+	    
+</body>
+</html>

@@ -1,0 +1,71 @@
+ <html>
+<head>
+  <title>Agricultural Blockchain App</title>
+   <link href="./app.css" rel='stylesheet' type='text/css'>
+  
+</head>
+ 
+ <body>
+ 
+ <div class="form" id="log-in-form">
+  <h2 class="form-title">Quality Testing</h2>
+		
+  <br>
+  <table>  
+
+  <input type="text" class="input-std" id="fid1" placeholder="Farmer Id">
+  <tr><td><b><label class = "black">Farmer Name</label></td><td>:</td></b><td><span class="black" span id="getval2"></span></td></tr>
+  <tr><td><b><label class = "black">Location</label></td><td>:</td></b><td><span class="black" span id="getval3"></span></td></tr>
+  <tr><td><b><label class = "black">Crop</label></td><td>:</td></b><td><span class="black" span id="getval4"></span></td></tr>
+  <tr><td><b><label class = "black">Phone</label></td><td>:</td></b><td><span class="black" span id="getval5"></span></td></tr>
+  <tr><td><b><label class = "black">Quantity</label></td><td>:</td></b><td><span class="black" span id="getval6"></span></td></tr>
+  <tr><td><b><label class = "black">Expected price</label><td>:</td></td></b><td><span class="black" span id="getval7"></span></td></tr>
+  
+  </table>  
+  <button type="button" class="btn-submit" id="getvalue" onclick="get();">Get Value</button>
+     
+  <br><br>
+  
+  <table align="center"> 
+  <tr>
+  <td><button type="button" id="printBlock" class="btn btn-selector" onclick="printBlock()">Print Block</button></td>
+  <td><button type="button" id="printTransaction" class="btn btn-selector" onclick="printTransaction()">Print Transaction</button></td></tr>
+  </table> 
+ 
+  <br>
+  <h4> Block Number : <span class="blockclass" span id="blocknum"> </span></h4>
+  <br>
+<button type="button" class="btn-submit1" id="Approve-btn" align ="center" font="20px" onclick="redirect3()">Approve Details</button>
+  
+
+
+  <span id="status"></span>
+
+ </div>
+ 
+ <div class="form" id="approve-form">
+		<h2 class="form-title">Product Details</h2>
+		<input type="text" class="input-std" id="lotno" placeholder="Lot Number">
+		<input type="text" class="input-std" id="grade" placeholder="Grade">
+		<input type="text" class="input-std" id="mrp" placeholder="MRP">
+		<input type="text" class="input-std" id="testdate" placeholder="Test Date">
+		<input type="text" class="input-std" id="expdate" placeholder="Expiry Date">
+		
+		<button type="button" class="btn-submit" id="setvalue" onclick="setQ()">Submit</button>
+			
+		<span id="status"></span>	
+
+	</div> 
+ 
+  <script src="./js/quality.js"></script>
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/web3.min.js"></script>
+   <script src="js/truffle-contract.js"></script>
+   <link href="./stylesheets/app.css" rel='stylesheet' type='text/css'>
+   <script src="js/app.js"></script>
+ </body>
+ 
+ </html>
