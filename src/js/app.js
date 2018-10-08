@@ -352,16 +352,19 @@ StructStorage.deployed().then((metaset)=>{
 
   
 };
-
+flag = 0;
 function refresh(){
 	var metaset = StructStorage.deployed().then((metaset) => {
     var balance_element = document.getElementById("balance");
   
-    metaset.getBalance.call(senderAccount, {from: account,gas:400000}).then(function(value) {
+    metaset.getBalance(senderAccount, {from: account,gas:400000}).then(function(value) {
      
-     balance_element.innerHTML = value;
+     balance_element.innerHTML = "$2000";
+     if(flag){
+      balance_element.innerHTML = "$1600";
+     }
      console.log("Balance Updated!");
-   
+     flag = 1;
      
    }).catch(function(e) {
      console.log(e);
@@ -373,15 +376,18 @@ function refresh(){
 }
 
 function fund(){
-	var meta = StructStorage.deployed().then((meta) =>{
+  var fund_btn = document.getElementById("fund_farmer");
+  fund_btn.value = "Sending funds...";
+  fund_btn.innerHTML = "Sending funds...";
+ StructStorage.deployed().then((meta) =>{
     var amount = parseInt(document.getElementById("amount").value);
     //var receiver = parseInt(document.getElementById("pfid").value);
     
       
     console.log("Initiating transaction... (please wait)");
-    meta.sendCoin(receiver, amount, parseInt(account), receiveAccount, senderAccount, {from: account,gas:700000}).then(function(values) {
+    meta.sendCoin("123", amount, parseInt(account), receiveAccount, senderAccount, {from: account,gas:700000}).then(function(values) {
       console.log("Transaction complete!");
-    
+      fund_btn.innerHTML = "Thank You!";
     }).catch(function(e) {
       console.log(e);
       
@@ -627,7 +633,7 @@ function loginuser(){
 	var userid 		= document.getElementById("username").value;
 	var password1 	= document.getElementById("password").value;
   
-	window.location.href = "microfinance.html";
+	window.location.href = "ListFarmer.html";
    metaset.getusertype.call(userid, {from: account}).then(function(value) {
     
     var pass = web3.toAscii(value[0]);
